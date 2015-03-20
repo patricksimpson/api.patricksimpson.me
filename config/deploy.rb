@@ -23,9 +23,10 @@ set :branch, 'master'
 set :shared_paths, ['config/database.yml', 'log']
 
 # Optional settings:
-#   set :user, 'foobar'    # Username in the server to SSH to.
+    set :user, 'patrick'    # Username in the server to SSH to.
 #   set :port, '30000'     # SSH port number.
-#   set :forward_agent, true     # SSH forward_agent.
+    set :forward_agent, true     # SSH forward_agent.
+    set :term_mode, :system
 
 # This task is the environment that is loaded for most commands, such as
 # `mina deploy` or `mina rake`.
@@ -54,9 +55,6 @@ task :deploy => :environment do
     # instance of your project.
     invoke :'git:clone'
     invoke :'deploy:link_shared_paths'
-    invoke :'bundle:install'
-    invoke :'rails:db_migrate'
-    invoke :'rails:assets_precompile'
     invoke :'deploy:cleanup'
 
     to :launch do
