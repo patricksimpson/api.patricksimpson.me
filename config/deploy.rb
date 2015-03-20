@@ -11,7 +11,7 @@ require 'mina/git'
 #   branch       - Branch name to deploy. (needed by mina/git)
 
 set :domain, 'api.patricksimpson.me'
-set :deploy_to, '/var/www/patricksimpson.me'
+set :deploy_to, '/var/www/api.patricksimpson.me'
 set :repository, 'git@github.com:patricksimpson/api.patricksimpson.me.git'
 set :branch, 'master'
 
