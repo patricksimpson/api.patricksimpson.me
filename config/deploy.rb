@@ -20,7 +20,7 @@ set :branch, 'master'
 
 # Manually create these paths in shared/ (eg: shared/config/database.yml) in your server.
 # They will be linked in the 'deploy:link_shared_paths' step.
-set :shared_paths, ['wp-config.php', 'log']
+set :shared_paths, ['wp-config.php', 'log', 'wp-content/uploads']
 
 # Optional settings:
     set :user, 'patrick'    # Username in the server to SSH to.
